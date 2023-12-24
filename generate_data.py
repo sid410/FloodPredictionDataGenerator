@@ -26,7 +26,7 @@ def generate_random_temperature(flooding):
 
 # in percent
 def generate_random_humidity(flooding):
-    return random.randint(40, 80) if not flooding else random.randint(70, 90)
+    return random.randint(40, 80) if not flooding else random.randint(60, 90)
 
 
 # in mm
@@ -40,7 +40,7 @@ def generate_random_precipitation(flooding):
 
 # in cm
 def generate_random_ultrasonic(flooding):
-    return random.randint(0, 15) if not flooding else random.randint(10, 30)
+    return random.randint(0, 20) if not flooding else random.randint(10, 30)
 
 
 def generate_flood_data():
