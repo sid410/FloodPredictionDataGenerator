@@ -1,9 +1,14 @@
+import warnings
+
+warnings.filterwarnings("ignore")
+
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+
 
 df = pd.read_csv("fake_flood_data.csv")
 
@@ -47,6 +52,6 @@ while True:
 
     scaled_flood_data = input_scaler.transform(flood_data)
     probability = classifier_logreg.predict_proba(scaled_flood_data)
-    flood_probability = probability[0][1] * 100
+    flood_probability = int(probability[0][1] * 100)
 
-    print(f"Probability of flood: {flood_probability}%")
+    print(f"Probability of flood: {flood_probability} %")
