@@ -36,6 +36,7 @@ output_scaled = pd.DataFrame(
 input_train, input_test, output_train, output_test = train_test_split(
     input_scaled, output_scaled, test_size=0.25
 )
+
 classifier_logreg = LogisticRegression(random_state=0)
 classifier_logreg.fit(input_train, output_train.values.ravel())
 

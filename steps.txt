@@ -1,0 +1,6 @@
+1. Read and separate data
+2. Normalize both input and output data
+3. Do a train and test split
+4. Make a classifier
+5. Make prediction and score accuracy
+6. Input new data and give probability
